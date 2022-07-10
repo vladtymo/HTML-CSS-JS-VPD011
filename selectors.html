@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <style>
+        /* CSS Code... */
+
+        /* selector template
+        
+            selector {
+                property1: value1;
+                property2: value2;
+            }
+
+        */
+
+        /* Tag selector */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            text-align: center;
+            background-color: chocolate;
+            color: white;
+        }
+
+        h2,
+        h3 {
+            background-color: lightblue;
+            color: darkslategrey;
+        }
+
+        p {
+            color: gray;
+            font-size: 18px;
+        }
+
+        abbr {
+            text-decoration: underline;
+        }
+
+        mark {
+            background-color: aquamarine;
+            color: darkblue;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Class selector */
+        .important-text {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 24px;
+            color: white;
+            background-color: white;
+            text-shadow: 1px 1px 5px black;
+        }
+
+        .styled-text {
+            color: lightgreen;
+            background-color: darkolivegreen;
+
+            line-height: 50px;
+            letter-spacing: 5px;
+            word-spacing: 20px;
+        }
+
+        /* default fonts */
+        .serif-font {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .sans-serif-font {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .monospace-font {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .cursive-font {
+            font-family: cursive;
+        }
+
+        .fantasy-font {
+            font-family: fantasy;
+        }
+
+        /* Id selector */
+        #main-header {
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="main-header">Intro to <abbr title="Cascade Style Sheets">CSS</abbr> Selectors</h1>
+
+    <h2 style="background-color: lightblue; color: darkslategrey;">Inline style</h2>
+    <p style="color: gray; font-size: 18px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero id omnis ut
+        eos temporibus quidem adipisci
+        veritatis placeat aperiam, repudiandae necessitatibus nisi sequi neque numquam officia facere vel atque nulla.
+    </p>
+    <p style="color: gray; font-size: 18px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit doloribus
+        aspernatur dicta nulla ipsam eaque.
+        Consequatur autem voluptates ab? Dolor a corporis veniam ea ab aliquam dolorem. Hic, omnis quisquam!</p>
+
+    <h2>Style using CSS selectors</h2>
+    <p>Lorem ipsum, dolor sit <mark>amet consectetur</mark> adipisicing elit. Laudantium soluta <mark>aut animi</mark>
+        numquam enim explicabo
+        provident obcaecati <mark>accusantium dolorem</mark>? Necessitatibus velit ea minima nisi inventore et quo iste
+        iure facilis.
+    </p>
+
+    <hr>
+
+    <h3>Header level 3</h3>
+    <p>Lorem ipsum dolor <mark class="important-text">sit amet</mark> consectetur adipisicing elit. Repellendus
+        reiciendis deleniti ipsum nemo
+        neque Lorem ipsum dolor sit amet, consectetur adipisicing elit. At necessitatibus eaque voluptate eligendi
+        obcaecati autem maiores, illum assumenda harum rem. Ipsum accusantium deleniti, voluptatum nam aut deserunt
+        officiis officia reprehenderit.
+        <span class="styled-text">blabla text hello css eriugfhaeru h</span> perferendis quia perspiciatis cupiditate
+        dicta cum? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, doloribus totam inventore
+        explicabo <span class="styled-text">sunt laudantium</span> ex eveniet nesciunt autem dignissimos, libero dolorem
+        in illo ea ab a quam obcaecati
+        culpa.
+    </p>
+    <h3>Header level 3</h3>
+    <p>Lorem ipsum dolor sit amet <mark class="important-text">consectetur adipisicing</mark> elit. Repellendus
+        reiciendis deleniti ipsum nemo
+        neque
+        perferendis <strong class="important-text">quia perspiciatis</strong> cupiditate dicta cum?</p>
+    <hr>
+
+    <h3>font-family property</h3>
+
+    <h4>serif font example</h4>
+    <p class="serif-font">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptatum saepe, nihil impedit veniam
+        nostrum ipsa. Ab odio, porro laborum eos ipsa, commodi, eaque dolores iure ea maxime similique? Aspernatur?
+    </p>
+
+    <h4>sans-serif font example</h4>
+    <p class="sans-serif-font">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptatum saepe, nihil impedit veniam
+        nostrum ipsa. Ab odio, porro laborum eos ipsa, commodi, eaque dolores iure ea maxime similique? Aspernatur?
+    </p>
+
+    <h4>monospace font example</h4>
+    <p class="monospace-font">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptatum saepe, nihil impedit veniam
+        nostrum ipsa. Ab odio, porro laborum eos ipsa, commodi, eaque dolores iure ea maxime similique? Aspernatur?
+    </p>
+
+    <h4>cursive font example</h4>
+    <p class="cursive-font">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptatum saepe, nihil impedit veniam
+        nostrum ipsa. Ab odio, porro laborum eos ipsa, commodi, eaque dolores iure ea maxime similique? Aspernatur?
+    </p>
+
+    <h4>fantasy font example</h4>
+    <p class="fantasy-font">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptatum saepe, nihil impedit veniam
+        nostrum ipsa. Ab odio, porro laborum eos ipsa, commodi, eaque dolores iure ea maxime similique? Aspernatur?
+    </p>
+</body>
+
+</html>
