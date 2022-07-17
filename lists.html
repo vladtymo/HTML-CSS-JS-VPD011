@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            padding: 10px;
+            background-color: bisque;
+            border-radius: 8px;
+        }
+
+        .reset-style {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* -=-=-=-=-=-=-=-=- Unordered List -=-=-=-=-=-=-=-=- */
+        .color-list {
+            list-style-type: circle;
+        }
+
+        .list-images {
+            list-style-position: inside;
+            list-style-image: url(./markers/snow.png);
+        }
+
+        .user-list {
+            list-style-type: upper-roman;
+        }
+
+        /* Pseudo elements: ::before ::after */
+
+        .custom-list {
+            list-style-type: none;
+        }
+
+        .custom-list li::before {
+            content: '[-] ';
+            font-weight: bold;
+            color: red;
+        }
+
+        /* -=-=-=-=-=-=-=-=- Ordered List -=-=-=-=-=-=-=-=- */
+        .ordered-custom-list {
+            list-style-type: none;
+            counter-reset: number;
+        }
+
+        .ordered-custom-list li::before {
+            content: '(' counter(number) ') ';
+            counter-increment: number;
+        }
+
+        /* ::marker - pseudo class for styling list item's markers */
+        .styled-markers li::marker {
+            color: green;
+        }
+
+        /* -=-=-=-=-=-=-=-=- Definition List -=-=-=-=-=-=-=-=- */
+        .lang-list {
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            /* border: width | style | color */
+            border: 1px solid darkmagenta;
+        }
+
+        .lang-list dt {
+            font-size: 20px;
+            text-align: center;
+
+            background-color: darkmagenta;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .lang-list dd {
+            background-color: brown;
+            padding: 10px;
+            margin-left: 0;
+            margin-bottom: 5px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        /* Pseudo classes: :last-child :first-child :nth-child(even) */
+        .lang-list dd:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Working with Lists</h1>
+
+    <h2>Unordered lists</h2>
+
+    <h3>Default unordered list</h3>
+    <ul>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est molestiae assumenda quae ex iure explicabo
+            vero, quaerat minus maiores doloremque, tempore alias. Iusto veritatis, vel impedit delectus quidem
+            aspernatur ut.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, tenetur.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ratione distinctio ex possimus illum
+            earum neque porro accusantium voluptas quas?</li>
+    </ul>
+
+    <h3>List with circle mark</h3>
+    <!-- ul>li*4 -->
+    <ul class="color-list">
+        <li>White</li>
+        <li>Yellow</li>
+        <li>Pink</li>
+        <li>Magenta</li>
+    </ul>
+
+    <h3>List without style</h3>
+    <ul class="reset-style">
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, esse.</li>
+        <li>Inventore asperiores vitae ipsam culpa labore soluta sint accusamus doloremque!</li>
+        <li>Animi eos facere, incidunt totam mollitia nemo consequatur quod officiis?</li>
+    </ul>
+
+    <h3>Lists with images</h3>
+    <ul class="list-images">
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, vel.</li>
+        <li>Ut esse omnis voluptatibus. Inventore porro dolorum nihil amet qui!</li>
+        <li>Nisi quam reprehenderit placeat maxime nobis? Sed accusamus dicta at.</li>
+    </ul>
+
+    <h3>List with custom markers</h3>
+    <ul class="custom-list">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Accusamus, culpa! Assumenda, perspiciatis numquam?</li>
+        <li>Quidem blanditiis culpa quisquam sapiente.</li>
+        <li>Repudiandae accusantium doloribus possimus corporis.</li>
+        <li>Provident nemo quaerat fugit corporis.</li>
+    </ul>
+
+    <h3>List with styled markers</h3>
+    <ul class="styled-markers">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Accusamus, culpa! Assumenda, perspiciatis numquam?</li>
+        <li>Quidem blanditiis culpa quisquam sapiente.</li>
+        <li>Repudiandae accusantium doloribus possimus corporis.</li>
+        <li>Provident nemo quaerat fugit corporis.</li>
+    </ul>
+
+    <h2>Ordered Lists</h2>
+
+    <h3>Default ordered list</h3>
+    <ol class="user-list">
+        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, eaque!</li>
+        <li>Quam libero tempore exercitationem iure architecto tenetur! Porro, soluta numquam!</li>
+        <li>Ad alias similique optio fugit non eaque cupiditate placeat accusamus!</li>
+        <li>Repellat soluta voluptatem totam ipsum illo quos aspernatur officia quibusdam?</li>
+        <li>Quis voluptatibus enim itaque praesentium pariatur at nihil hic cupiditate.</li>
+    </ol>
+
+    <h3>List with attributes</h3>
+    <ol start="6" reversed>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, consequuntur.</li>
+        <li>Perspiciatis delectus in esse beatae facilis voluptatum autem optio consequatur.</li>
+        <li>Delectus eius voluptatem recusandae blanditiis esse accusantium perspiciatis debitis fugiat!</li>
+        <li>Enim vitae ea totam pariatur incidunt perspiciatis dolorum, laudantium eos?</li>
+        <li value="20">Ab, nisi reiciendis nesciunt commodi dolorem corrupti rerum inventore aspernatur?</li>
+        <li>Saepe porro quae quasi eos vitae, sint molestias obcaecati reprehenderit.</li>
+        <li>Vel mollitia cupiditate cumque nihil facilis quibusdam! Neque, culpa sequi.</li>
+    </ol>
+
+    <h3>Ordered list with custom markers</h3>
+
+    <ol class="ordered-custom-list">
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Accusamus, culpa! Assumenda, perspiciatis numquam?</li>
+        <li>Quidem blanditiis culpa quisquam sapiente.</li>
+        <li>Repudiandae accusantium doloribus possimus corporis.</li>
+        <li>Provident nemo quaerat fugit corporis.</li>
+    </ol>
+
+    <h2>Definition Lists</h2>
+
+    <h3>Default style</h3>
+    <dl>
+        <dt>HTML</dt>
+        <dd>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed
+            in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages
+            such as JavaScript.</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written
+            in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside
+            HTML and JavaScript.</dd>
+    </dl>
+
+    <h3>Custom style</h3>
+    <dl class="lang-list">
+        <dt>HTML</dt>
+        <dd>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed
+            in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages
+            such as JavaScript.</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written
+            in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside
+            HTML and JavaScript.</dd>
+        <dt>JS</dt>
+        <dd>JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the
+            World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for
+            web page behavior, often incorporating third-party libraries.</dd>
+    </dl>
+</body>
+
+</html>
