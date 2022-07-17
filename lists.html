@@ -99,6 +99,17 @@
         .lang-list dd:last-child {
             margin-bottom: 0;
         }
+
+        /* -=-=-=-=-=-=-=-=- Multilevel List -=-=-=-=-=-=-=-=- */
+        /* Level 2 */
+        ol ol {
+            color: gray;
+        }
+
+        /* Level 3 */
+        ol ol ul {
+            color: darkblue;
+        }
     </style>
 </head>
 
@@ -219,6 +230,28 @@
             World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for
             web page behavior, often incorporating third-party libraries.</dd>
     </dl>
+
+    <h2>Multilevel Lists</h2>
+    <ol>
+        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, porro.
+            <ol>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Cupiditate voluptate dolor nesciunt non.
+                    <ul>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+                        <li>Tempore ab officia aperiam a? Repellat, provident!</li>
+                        <li>Quo repellendus cupiditate id excepturi, omnis itaque!</li>
+                        <li>Delectus, ullam minus. Laborum fuga natus impedit.</li>
+                        <li>Incidunt id illo similique in ratione perferendis?</li>
+                    </ul>
+                </li>
+                <li>Sunt reiciendis fuga sequi deserunt?</li>
+            </ol>
+        </li>
+        <li>Impedit explicabo mollitia beatae, officia omnis reiciendis accusamus perferendis alias!</li>
+        <li>Hic inventore voluptate unde magni nisi ullam dolore, quasi reprehenderit!</li>
+        <li>Esse, eveniet nisi voluptate accusamus illo cumque in inventore ea!</li>
+    </ol>
 </body>
 
 </html>
