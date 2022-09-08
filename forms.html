@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        label {
+            display: inline-flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        label input {
+            flex-grow: 1;
+        }
+
+        label input[type="checkbox"] {
+            flex-grow: 0;
+        }
+
+        .styled-form {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: aliceblue;
+        }
+
+        .styled-form h2 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .styled-input {
+            background-color: darkcyan;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px black;
+            text-align: center;
+        }
+
+        .styled-input:focus {
+            outline: none;
+            background-color: rgb(0, 91, 91);
+            box-shadow: none;
+        }
+
+        .styled-input::placeholder {
+            color: white;
+            opacity: .7;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Working with Forms</h1>
+    <hr>
+    <form action="#" class="styled-form">
+        <h2>Registration Form</h3>
+            <!-- <div>
+            <label for="name-in">Name:</label>
+            <input type="text" id="name-in">
+        </div> -->
+            <label>Name:
+                <input type="text">
+            </label>
+            <label>Email:
+                <input type="email">
+            </label>
+            <label>Password:
+                <input type="password">
+            </label>
+            <input type="date">
+            <input type="month">
+            <input type="time">
+            <input type="datetime">
+            <input type="color">
+            <input type="number" min="10" max="20" step="0.5">
+            <input type="tel" placeholder="Enter your phone" class="styled-input">
+            <input type="url" placeholder="Enter your website">
+
+            <label>Is Required?
+                <input type="checkbox">
+            </label>
+
+            <div>
+                <label>Econom
+                    <input type="radio" name="category">
+                </label>
+                <label>Standart
+                    <input type="radio" name="category">
+                </label>
+                <label>Comfort
+                    <input type="radio" name="category">
+                </label>
+            </div>
+
+            <input type="range">
+            <input type="file">
+
+            <input type="button" value="Click Me">
+            <input type="reset" value="Clear">
+
+            <input type="submit">
+            <button>Submit</button>
+    </form>
+</body>
+
+</html>
